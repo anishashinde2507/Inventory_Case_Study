@@ -1,0 +1,24 @@
+CREATE DATABASE stockflow;
+
+USE stockflow;
+
+INSERT INTO companies (id, name) VALUES (1, 'ABC Pvt Ltd');
+
+INSERT INTO warehouses (id, name, company_id) VALUES (1, 'Main Warehouse', 1);
+
+INSERT INTO products (id, name, sku, low_stock_threshold, price)
+VALUES (1, 'Blue Pen', 'PEN001', 50, 10.50);
+
+
+INSERT INTO suppliers (id, name, contact_email, product_id)
+VALUES (1, 'Stationery Supplier', 'supplier@example.com', 1);
+
+INSERT INTO inventory (id, quantity, product_id, warehouse_id)
+VALUES (1, 200, 1, 1);
+
+INSERT INTO sales (id, quantity, sale_date, product_id)
+VALUES (1, 20, '2025-08-06', 1);
+
+INSERT INTO companies (name) VALUES ('ABC Pvt Ltd');
+
+UPDATE inventory SET quantity = 30 WHERE id = 1;

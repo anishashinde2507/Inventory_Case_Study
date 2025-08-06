@@ -1,0 +1,2 @@
+GET http://localhost:8080/api/companies/1/alerts/low-stock
+Accept: application/json
